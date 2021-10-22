@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+body{
+    margin: 0px;
+    padding: 0%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.s-services .funciones .titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 0px;
+    margin-bottom: 10rem;
+    
+}
+.s-services .funciones .titulo h1{
+    font-weight: 900;
+}
+/*caracteristicas*/
+.s-services .funciones .textos{
+    display: flex;
+   margin-bottom: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 37vh;
+    flex-wrap: wrap;
+    max-height: 40vh;
+    padding-top: 20px;
+    width: 100%;
+    
+}
+.s-services .funciones .textos .caracter{
+    width: 50%;
+    flex-wrap: wrap;
+    height: 37vh;
+    max-height: 40vh;
+}
+.s-services .funciones .textos .caracter h1{
+    color: white;
+    font-weight: 800;
+    text-shadow: -4.53072px 3.62457px 3.62457px #C42E6F;
+    font-size: 4vw;
+}
+.s-services .funciones .textos .caracter h2{
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    text-shadow: -4.2564px 3.40512px 3.40512px rgba(255, 255, 255, 0.45);
+}
+.s-services .funciones .textos .caracter p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.s-services .funciones .textos .imgCaracter{
+    width: 50%;
+}
+.s-services .funciones .textos .imgCaracter img{
+    width: 100%;
+    height: 100%;
+    
+}
+.s-services .funciones .text button{
+    width: 219px;
+    height: 51px;
+    background: #C42E6F;
+    box-shadow: -9px 9px 4px rgba(196, 46, 111, 0.46);
+    border-radius: 16px;
+    border: none;
+    margin-top: 30px;
+    transition-duration: 200ms;
+    text-decoration: none;
+    font-size: 21.7985px;
+    font-weight: 800;
+    text-shadow: -4.00853px 3.20683px 3.20683px #952254;
+    color: white;
+}
+
+.s-services .funciones .text button:focus{
+    box-shadow: -0px 0px 0px rgba(196, 46, 111, 0.46);
+    margin-left: -30px;
+}
+.imgS{
+    background-color: black;
+    text-align: center;
+    margin-top: 30px;
+
+}
+.imgS .imgDeMuestra{
+    width: 100%;
+}
+.imgS .imgDeMuestra img{
+    width: 100%;
+}
+@media only screen and (min-width: 800px){
+  body{
+    width: 100%;
+    
+  } 
+  .contenedorMadre{
+      width: 800px;
+      margin: auto;
+  }
+  .s-services .funciones .textos .caracter h1{
+    font-size: 30px;
+}
+
+}

@@ -1,0 +1,87 @@
+
+.contact-content .contact-primary form{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    background-color: #000000;
+}
+
+.contact-content .contact-primary form h1{
+    font-size: 6vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: -4.59151px 3.67321px 3.67321px rgba(255, 255, 255, 0.45);
+}
+.contact-content .contact-primary form label{
+    font-size: 25px;
+}
+.contact-content .contact-primary form input{
+    width: 60px;
+    height: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 30px;
+}
+.contact-content .contact-primary form .tallas{
+    display: flex;
+    justify-content: center;
+}
+.contact-content .contact-primary form .tallas .talla{
+    margin: 10px 10px 30px;
+}
+.contact-content .contact-primary form .departamento select{
+   margin: auto;
+    width: 70%;
+    height: 100%;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 9vw;
+    margin-top: 40px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+.contact-content .contact-primary form .departamento label{
+    margin-top: 30px;
+    font-size: 7vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: -4.59151px 3.67321px 3.67321px rgba(255, 255, 255, 0.45);
+
+}
+.contact-content .contact-primary form h2{
+     font-size: 6vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: -4.59151px 3.67321px 3.67321px rgba(255, 255, 255, 0.45);
+
+}
+.contact-content .contact-primary form .departamento option{
+    color: black;
+}
+@media only screen and (min-width: 633px){
+    .contact-content .contact-primary form h2{
+        font-size: 30px;
+   }
+   .contact-content .contact-primary form h1{
+    font-size: 20px;
+   }
+   .contact-content .contact-primary form .departamento label{
+    font-size: 20px;
+   }
+   .contact-primary {
+    width: 105%;
+}
+.contact-content .contact-primary form .departamento select{
+     font-size: 20px;
+ }
+ .contact-content .contact-primary form .departamento option{
+     color: black;
+ }
+}

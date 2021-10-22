@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Centitex Overoles</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  
+  <!-- Componente de estilos iconos y alargamientos globales  -->
+  
+  <%- include('Componentes/catalogo.html'); %>
+</head>
+
+<body>
+  <!-- Navegador de links -->
+  <%- include('Componentes/Nav.html'); %>
+   
+  
+  <div class="contenedor">
+         <section class="titulo">
+           <div class="textos">
+            <h1>CATALOGO</h1>
+            <p>Modelos Recientes</p>
+           </div>
+         </section>
+         
+         <section class="productos">
+            <% Object.values(modelos).forEach(function(modelo){%>
+
+              <article class="producto">
+                <a href="catalogo/<%= modelo.id%>">
+                <div class="titulo">
+                  <h1><%= modelo.titulo%></h1>
+                </div>
+                <div class="img">
+                  <img class="wow animate__animated animate__fadeIn " src="<%= modelo.img%>" alt="">
+                </div>
+              </a>
+              </article>
+            <%})%>
+          </section>
+
+
+            
+</div>
+
+
+ 
+  
+
+   <!-- Scripts y Pantalla de carga -->
+   <%- include('Componentes/ScriptsGlobal.html'); %>
+
+</body>
+
+</html>   

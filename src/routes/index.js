@@ -29,9 +29,11 @@ router.get('/contactanos', (req, res)=>{
   res.render('contactanos.html')
 })
 
-router.get('/catalogo', async(req, res)=>{
 
-  const query = db.collection('modelos');
+//categoria seleccionada 
+router.get('/categoria/:idCategoria', async(req, res)=>{
+
+  const query = db.collection(req.params.idCategoria);
   const querySnapshot = await query.get();
 
   const docs = querySnapshot.docs;
@@ -42,17 +44,23 @@ router.get('/catalogo', async(req, res)=>{
       img: doc.data().img,
       description: doc.data().description,
       caracteristicas: doc.data().caracteristicas,
-      precio: doc.data().precio
+      precio: doc.data().precio,
+      premium: doc.data().premium,
+      textPremium: doc.data().textPremium
   }));
 
   console.log(datos);
-  res.render('catalogo.html', {modelos: datos})
+  res.render('catalogo.html', {modelos: datos, titulo: req.params.idCategoria})
 });
 
-router.get('/catalogo/:modeloId', (req, res)=>{
+router.get('/categoria', (req, res) => {
+  res.render('categoria.html');
+});
+
+router.get('/categoria/:idCategoriasSele/:modeloId', (req, res)=>{
   (async ()=>{
          try{
-          const doc = db.collection('modelos').doc(req.params.modeloId);
+          const doc = db.collection(req.params.idCategoriasSele).doc(req.params.modeloId);
           const item = await doc.get();
           const respondido = item.data();
           console.log(respondido);
@@ -63,6 +71,9 @@ router.get('/catalogo/:modeloId', (req, res)=>{
   })()
 
 })
+router.get('/categorias/admin/overoles/crear', (req, res) => {
+  res.render('admin.html');
+});
 
 router.get('/categorias/admin/overoles/crear', (req, res) => {
   res.render('admin.html');

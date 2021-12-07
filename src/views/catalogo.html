@@ -11,35 +11,40 @@
   
   <!-- Componente de estilos iconos y alargamientos globales  -->
   
-  <%- include('Componentes/catalogo.html'); %>
+  <%- include('subcomponentes/Header.html'); %>
 </head>
 
 <body>
   <!-- Navegador de links -->
-  <%- include('Componentes/Nav.html'); %>
+  <%- include('subcomponentes/Nav.html'); %>
    
   
   <div class="contenedor">
          <section class="titulo">
            <div class="textos">
-            <h1>CATALOGO</h1>
-            <p>Modelos Recientes</p>
+            <h1><%=titulo%></h1>
+            <a href="/categoria"><p>Volver al Inventario</p></a>
            </div>
          </section>
          
          <section class="productos">
             <% Object.values(modelos).forEach(function(modelo){%>
 
-              <article class="producto">
-                <a href="catalogo/<%= modelo.id%>">
-                <div class="titulo">
-                  <h1><%= modelo.titulo%></h1>
-                </div>
-                <div class="img">
-                  <img class="wow animate__animated animate__fadeIn " src="<%= modelo.img%>" alt="">
-                </div>
-              </a>
-              </article>
+                  <article class="producto" style="">
+                    <a href="catalogo/<%= modelo.id%>">
+                    <div class="titulo">
+                      <h1 style="<%= modelo.premium%>"><%= modelo.titulo%></h1>
+                      <h2><%= modelo.textPremium%></h2>
+                    </div>
+                    <div class="img">
+                      <img class="wow animate__animated animate__fadeIn " src="<%= modelo.img%>" alt="">
+                    </div>
+                  </a>
+                  </article>
+              
+               
+              
+             
             <%})%>
           </section>
 
@@ -52,8 +57,77 @@
   
 
    <!-- Scripts y Pantalla de carga -->
-   <%- include('Componentes/ScriptsGlobal.html'); %>
+   <%- include('subcomponentes/ScriptsGlobal.html'); %>
 
+   <style>
+     @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Patua+One&display=swap');
+
+.contenedor{
+    width: 100%;
+    background-color: black;
+    padding-top: 30px;
+}
+.contenedor .titulo{
+    margin: auto;
+}
+.contenedor .titulo .textos{
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+   
+}
+.contenedor .titulo .textos h1{
+    color: white;
+    letter-spacing: 2px;
+    margin: 50px 0px 0px;
+    text-transform: uppercase;
+}
+.contenedor .titulo .textos p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #F4A023;
+    
+}
+.contenedor .productos{
+    margin: auto;
+}
+.contenedor .productos .producto{
+    text-align: center;
+
+}
+.contenedor .productos .producto h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+}
+.contenedor .productos .producto h2{
+ margin: 0px 0px 20px 0px;
+ color: #EABE3F;
+ -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+.contenedor .productos .img{
+
+}
+.contenedor .productos .img img{
+    border-radius: 20px;
+    width: 80%;
+} 
+@-webkit-keyframes glow {
+  from {
+    color: #EABE3F;
+    text-shadow: 0 0 10px #EABE3F, 0 0 20px #EABE3F, 0 0 30px #EABE3F, 0 0 40px #EABE3F, 0 0 50px #EABE3F, 0 0 60px #EABE3F, 0 0 70px #EABE3F, 0 0 90px #EABE3F;
+  }
+  to {
+    color: #ffffff;
+    text-shadow: 0 0 20px #EABE3F, 0 0 30px #EABE3F, 0 0 40px #EABE3F, 0 0 50px #EABE3F, 0 0 60px #EABE3F, 0 0 70px #EABE3F, 0 0 80px #EABE3F, 0 1 90px #EABE3F;
+  }
+}
+   </style>
 </body>
 
 </html>   
